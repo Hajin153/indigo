@@ -4,6 +4,159 @@
     width: 100%;
     max-width: 1200px; 
     margin: 0 auto;
-    background-color: aquamarine;
+    padding: 0 10px;
+    /* background-color: aquamarine; */
 }
+
+header .menu-icon div {
+    width: 23px; height: 2px;
+    margin: 5px 0;
+    background: rgb(70, 70, 182);
+}
+
+.indigo-flex-box {
+    display: flex;
+}
+
+.indigo-flex-box .menu-icon {
+    margin: 20px 0 20px 300px;
+}
+
+header nav {
+    display: none;
+    width: 100%;
+    background-color: rgb(70, 70, 182);
+} 
+
+/* gnb */
+.gnb > li {
+    width: 100%;
+}
+
+.gnb > li > a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid rgb(60, 60, 151);
+}
+
+/*========== main ==========*/
+/* article */
+article img {
+    width: 100%;
+}
+
+/* Section*/
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* intro */
+/* des */
+.des h3 {
+    display: none;
+}
+
+.promo {
+    margin-bottom: 30px 1%;
+}
+
+.promo img {
+    height: 50px;
+    margin: 20px;
+}
+
+/* work */
+.work-text {
+    position: relative;
+}
+
+.work .work-list .work-text a::before {
+    display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	width:100%;
+	height:100%;
+	background:#3f51b5;  /* 파란배경 */
+	content:"";
+	opacity:0;
+	transition:all 0.2s;
+}
+
+.work .work-list .work-text a:hover::before{
+	opacity:0.85;
+}
+
+.work .work-list .work-text .info{
+	position:absolute;
+	top:0;
+	left:23px;
+	z-index:20;
+	opacity:0;
+	transition:all 0.3s;
+}
+	
+.work .work-list .work-text a:hover .info{
+	transform:translateY(23px);
+	opacity:1;	
+}
+
+/* blog */
+.blog .blog-des {
+    text-align: left;
+    margin: 0 35px;
+}
+
+.blog .blog-des p { 
+    margin-top: 0;
+    margin-bottom: 35px;
+    line-height: 25px;
+}
+
+
+.blog-des span {
+    font-size: 12px;
+    color: lightgray;
+}
+
+
+/*========== footer ==========*/
+.footer-contact div input,
+.footer-contact div textarea {
+    width: 100%;
+    line-height: 50px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+
+.footer-contact input::placeholder,
+.footer-contact div textarea::placeholder {
+    color: rgb(110, 110, 212);
+    font-size: 14px;
+    font-family: '맑은 고딕';
+}
+
+.footer-button p {
+    float: right;
+    margin-right: 1px;
+    margin-bottom: 90px;
+}
+
+.footer-button a {
+    border: 1px solid rgb(70, 70, 182);
+    background-color: rgb(70, 70, 182);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+iframe {
+    width: 100%;
+}
+
 

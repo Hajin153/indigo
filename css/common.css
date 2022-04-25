@@ -23,20 +23,40 @@ a {
 }
 
 h1 {
-    font-size: 20px;
-    color: blue;
+    font-size: 25px;
+    color: rgb(70, 70, 182);
+    font-weight: normal;
+    margin: 20px;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: normal;
+    color: rgb(70, 70, 182);
+    margin: 30px;
+    text-align: center;
 }
 
 h3 {
-    font-size: 0;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(70, 70, 182);
 }
 
 p {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 20px 5%;
+    line-height: 29px;
+    color: rgb(85, 85, 85);
+}
+
+hr {
+    border: 0.5px solid rgb(238, 238, 238);
+    margin-top: 80px;
 }
 
 header,
