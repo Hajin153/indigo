@@ -19,16 +19,24 @@ header .menu-icon div {
 }
 
 .indigo-flex-box .menu-icon {
+    position: relative;
     margin: 20px 0 20px 300px;
 }
 
 header nav {
     display: none;
+    position: absolute;
+    top: 70px;
     width: 100%;
     background-color: rgb(70, 70, 182);
 } 
 
 /* gnb */
+.gnb {
+    display: flex;
+    flex-direction: column;
+}
+
 .gnb > li {
     width: 100%;
 }
@@ -49,13 +57,16 @@ article img {
 
 /* Section*/
 section {
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
-
 /* intro */
 /* des */
+.des-flex-box {
+    display: column;
+}
+
 .des h3 {
     display: none;
 }
@@ -65,11 +76,17 @@ section {
 }
 
 .promo img {
+    display: inline-block;
     height: 50px;
     margin: 20px;
 }
 
 /* work */
+.work-flex-box {
+   display: flex;
+   flex-direction: column;
+}
+
 .work-text {
     position: relative;
 }
@@ -96,6 +113,8 @@ section {
 	position:absolute;
 	top:0;
 	left:23px;
+    color: #fff;
+    text-align: left;
 	z-index:20;
 	opacity:0;
 	transition:all 0.3s;
@@ -106,7 +125,30 @@ section {
 	opacity:1;	
 }
 
+.line {
+    text-align: center;
+}
+
+.line span {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background-color: rgb(70, 70, 182);
+    border: 1px solid #000;
+    margin: 80px;
+}
+
 /* blog */
+.blog-flex-box {
+    display: flex;   
+    flex-direction: column; 
+}
+
+.blog img {
+    display: inline-block;
+    margin-top: 35px;
+}
+
 .blog .blog-des {
     text-align: left;
     margin: 0 35px;
@@ -126,16 +168,19 @@ section {
 
 
 /*========== footer ==========*/
-.footer-contact div input,
-.footer-contact div textarea {
+.contact {
+    margin-top: 50px;
+}
+.contact div input,
+.contact div textarea {
     width: 100%;
     line-height: 50px;
     border: none;
     border-bottom: 2px solid lightgray;
 }
 
-.footer-contact input::placeholder,
-.footer-contact div textarea::placeholder {
+.contact input::placeholder,
+.contact div textarea::placeholder {
     color: rgb(110, 110, 212);
     font-size: 14px;
     font-family: '맑은 고딕';
@@ -160,3 +205,90 @@ iframe {
 }
 
 
+
+/*==========++++ tablet ++++==========*/
+@media screen and (min-width:768px) { 
+    header .menu-icon div {
+        display: none;
+    }
+    
+    header nav {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        width: 55%;
+        background-color: #fff;
+    } 
+    
+    /* gnb */
+    .gnb {
+        flex-direction: row;
+    }
+    
+    .gnb > li > a {
+        color: rgb(70, 70, 182);
+        padding: 0;
+        border: none;
+    }  
+
+    /*========== main ==========*/
+    /* intro */
+    /* des */
+    .des-flex-box {
+        display: flex;
+    }
+
+    .promo {
+        margin: 30px 0 30px;
+    }
+
+    /* work */
+    .work-flex-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .work-flex-box > div {
+        width: 50%;
+    }
+
+    .work-flex-box img {
+        width: 100%;
+    }
+
+    /* blog */
+    .blog-flex-box {
+        display: flex;   
+        flex-direction: row; 
+    }
+
+    .blog-flex-box img {
+        width: 100%;
+    }
+
+    .blog .blog-des {
+        text-align: left;
+        margin: 0 10px;
+    }
+
+    .blog .blog-des p { 
+        margin-left: 5px;
+    }
+
+
+    /*========== footer ==========*/
+    .contact {
+        display: flex;
+    }
+
+    .contact > div {
+        width: 50%;
+    }
+
+    .footer-contact {
+        line-height: 69px;
+        margin-right: 30px;
+    }
+ }
